@@ -1,0 +1,195 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+body{
+  max-width: 100vw;
+  background: #212121;
+}
+h2{
+  color: white;
+  text-align: center;
+  padding: .8rem 0;
+  margin: 1rem 0 .3rem 0;
+}
+p,
+span{
+  color: white;
+  font-size: 1.125rem;
+  letter-spacing: .125rem;
+}
+a{
+  color: white;
+  text-align: center;
+}
+a:hover{
+  opacity: .8;
+  transition: all .2s ease-in;
+}
+.flex-horizontal{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-vertical{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#header{
+  position: fixed;
+  z-index: 1;
+  flex-wrap: wrap;
+  padding: .8rem;
+  width: 100%;
+  background: rgba(21, 21, 21, .85);
+}
+#header a{
+  color: white;
+  font-size: 1.2rem;
+}
+#logo{
+  width: 3rem;
+}
+.list-item{
+  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list-item a{
+  width: 100%;
+  height: 100%;
+  padding: .3rem .8rem;
+}
+#capa{
+  overflow: hidden;
+}
+#capa img{
+  width: 100%;
+  animation: zoom 15s ease-in-out;
+}
+#sobre{
+  text-align: center;
+  padding: 0 2rem;
+}
+#servicos{
+  margin: 1.85rem auto;
+  text-align: center;
+  width: 90%;
+}
+.lista-servicos{
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.servico{
+  width: 30%;
+  min-width: 250px;
+  padding: 1.8rem .8rem;
+  margin: .5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.servico:hover,
+.servico:hover *{
+  color: #212121;
+  background: #ccc;
+}
+.servico p{
+  font-size: .9rem;
+  width: 90%;
+}
+.servico i{
+  color: #ccc;
+  font-size: 5rem;
+  margin-bottom: 2.5rem;
+}
+.painel{
+  padding: 0 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.painel img{
+  width: 40%;
+  margin: 1rem;
+  border-radius: 3px;
+  transition: all .2s ease;
+}
+.painel img:hover,
+.painel img:focus{
+  transform: scale(1.025);
+}
+#contato{
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  justify-content: space-evenly;
+  width: 70%;
+}
+#contato a{
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: .3rem;
+}
+#contato a:hover{
+  background: #ccc;
+  color: #212121;
+}
+#contato i{
+  font-size: 2.5rem;
+}
+#footer{
+  margin: .8rem auto;
+  justify-content: center;
+  width: 80%;
+  padding: 2rem 0;
+  text-align: center;
+}
+#footer i{
+  font-size: 2.5rem;
+  margin: .3rem .7rem;
+}
+@media (max-width: 500px){
+  #header{
+    flex-direction: column;
+  }
+  .nav-list{
+    flex-direction: column;
+    width: 100%;
+  }
+  .list-item{
+    margin-left: 0;
+    width: 100%;
+  }
+  .list-item:hover{
+    background: #ccc;
+    color: #212121;
+  }
+  #sobre span{
+    display: none;
+  }
+  .servico{
+    width: 80%;
+  }
+  .painel{
+    flex-direction: column;
+  }
+  .painel img{
+    width: 90%;
+  }
+}
+@keyframes zoom {
+  0%{
+    transform: scale(1.3);
+    opacity: .5;
+  }
+  100%{
+    transform: scale(1);
+    opacity: .8;
+  }
+}
